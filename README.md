@@ -21,6 +21,7 @@ Whether you're managing test inputs, form submissions, or multiple test cases wi
 - Use Excel as an external test data provider for consistent automation
 
 # How to Use
+## General Use
 ```java
 String filePath = "testingDataDriven.xlsx"; // target file, must specify full path
 String sheetName = "Sheet1"; // name of the sheet to access
@@ -31,3 +32,40 @@ for (Map<String, String> row : testData) {
     System.out.println("Username: " + row.get("username"));
     System.out.println("Password: " + row.get("password"));
 }
+```
+
+## TestNG / Unit Test
+#### DataDrivenProvider.java
+
+```java
+import com.coedotzmagic.drivebydataxcel.DriveByDataXCel;
+
+String filePath = "testingDataDriven.xlsx"; // target file, must specify full path
+String sheetName = "Sheet1"; // name of the sheet to access
+
+public class DataDrivenProvider {
+
+    public static Object[][] getDataFromExcel(String filePath, String sheetName) {
+        List<Map<String, String>> testData = DriveByDataXCel.readTestDataFromExcel(filePath, sheetName);
+        Object[][] data = new Object[testData.size()][1];
+        for (int i = 0; i < testData.size(); i++) {
+            data[i][0] = testData.get(i);
+        }
+        return data;
+    }
+
+    @DataProvider(name = "TestData")
+    public static Object[][] getTestData() {
+        return getDataFromExcel(filePath, sheetName);
+    }
+}
+```
+#### File Testing
+```java
+@Test(priority = 1, dataProvider = "TestData", dataProviderClass = DataDrivenProvider.class)
+public void ExecuteTest(Map<String, String> data) throws Exception {
+    System.out.println("Username: " + data.get("username"));
+    System.out.println("Password: " + data.get("password"));
+}
+
+```
