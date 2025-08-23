@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7330587-fa1d-485e-beb0-8238d8e34d4d" name="Changes" comment="" />
+    <list default="true" id="b7330587-fa1d-485e-beb0-8238d8e34d4d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "poncoe"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/CoedotzMagic/DriveByDataXCel.git",
@@ -35,6 +44,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Coedotz/IdeaProjects/DriveByDataXCel",
     "onboarding.tips.debug.path": "C:/Users/Coedotz/IdeaProjects/DriveByDataXCel/src/main/java/com/coedotzmagic/drivebydataxcel/Main.java"
   }
 }]]></component>
@@ -65,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755984684462</updated>
-      <workItem from="1755984685821" duration="1340000" />
+      <workItem from="1755984685821" duration="1748000" />
     </task>
     <servers />
   </component>
