@@ -19,3 +19,15 @@ Whether you're managing test inputs, form submissions, or multiple test cases wi
 - Loop through multiple test cases using different Excel rows
 - Parameterize test inputs in Katalon using structured Excel maps
 - Use Excel as an external test data provider for consistent automation
+
+# How to Use
+```java
+String filePath = "testingDataDriven.xlsx"; // target file, must specify full path
+String sheetName = "Sheet1"; // name of the sheet to access
+
+List<Map<String, String>> testData = DataDrivenWithExcel.readTestDataFromExcel(filePath, sheetName);
+
+for (Map<String, String> row : testData) {
+    System.out.println("Username: " + row.get("username"));
+    System.out.println("Password: " + row.get("password"));
+}
