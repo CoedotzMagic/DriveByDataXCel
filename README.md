@@ -25,7 +25,7 @@ Whether you're managing test inputs, form submissions, or multiple test cases wi
 String filePath = "testingDataDriven.xlsx"; // target file, must specify full path
 String sheetName = "Sheet1"; // name of the sheet to access
 
-List<Map<String, String>> testData = DataDrivenWithExcel.readTestDataFromExcel(filePath, sheetName);
+List<Map<String, String>> testData = DriveByDataXCel.readTestDataFromExcel(filePath, sheetName);
 
 for (Map<String, String> row : testData) {
     System.out.println("Username: " + row.get("username"));
