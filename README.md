@@ -65,13 +65,40 @@ String sheetName = "Sheet1"; // name of the sheet to access
 public class DataDrivenProvider {
 
     public static Object[][] getDataFromExcel(String filePath, String sheetName) {
-        List<Map<String, String>> testData = DriveByDataXCel.readTestDataFromExcel(filePath, sheetName);
-        Object[][] data = new Object[testData.size()][1];
-        for (int i = 0; i < testData.size(); i++) {
-            data[i][0] = testData.get(i);
+    List<Map<String, String>> testData = DriveByDataXCel.readTestDataFromExcel(filePath, sheetName);
+
+    List<Map<String, String>> validData = new ArrayList<>();
+    int rowNum = 1;
+
+    for (Map<String, String> row : testData) {
+        if (isRowValid(row, rowNum)) {
+            validData.add(row);
+        } else {
+            System.out.println("[Warning] Skipping row " + rowNum + " due to missing or empty fields.");
         }
-        return data;
+        rowNum++;
     }
+
+    Object[][] data = new Object[validData.size()][1];
+    for (int i = 0; i < validData.size(); i++) {
+        data[i][0] = validData.get(i);
+    }
+
+    return data;
+}
+
+private static boolean isRowValid(Map<String, String> row, int rowNum) {
+    String[] requiredFields = {"username", "password"};
+
+    for (String field : requiredFields) {
+        String value = row.get(field);
+        if (value == null || value.trim().isEmpty()) {
+            System.err.println("[Error] Missing or empty value for '" + field + "' in row " + rowNum);
+            return false;
+        }
+    }
+    return true;
+}
 
     @DataProvider(name = "TestData")
     public static Object[][] getTestData() {
