@@ -14,7 +14,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
  */
 
 public class DriveByDataXCel {
-    private static String msgError;
 
     /**
      * <b>readTestDataFromExcel</b>
@@ -64,17 +63,9 @@ public class DriveByDataXCel {
 
             return data;
         } catch (Exception e) {
-            msgError = e.getMessage();
+            System.out.println("[Error] CoedotzMagic - DriveByDataXCel: " + e.getMessage());
             return null;
         }
-    }
-
-    /**
-     * <b>getMsgError</b>
-     * @return String value message error if null
-     */
-    public static String getMsgError() {
-        return msgError;
     }
 
 }
