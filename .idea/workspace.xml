@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7330587-fa1d-485e-beb0-8238d8e34d4d" name="Changes" comment="update README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b7330587-fa1d-485e-beb0-8238d8e34d4d" name="Changes" comment="improving null safety">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/coedotzmagic/drivebydataxcel/DriveByDataXCel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coedotzmagic/drivebydataxcel/DriveByDataXCel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1755984684462</updated>
       <workItem from="1755984685821" duration="4824000" />
-      <workItem from="1756106377202" duration="1737000" />
+      <workItem from="1756106377202" duration="1904000" />
     </task>
     <task id="LOCAL-00001" summary="configure">
       <option name="closed" value="true" />
@@ -150,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755990339251</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pushh">
+      <option name="closed" value="true" />
+      <created>1756109796787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756109796787</updated>
+    </task>
+    <task id="LOCAL-00009" summary="improving null safety">
+      <option name="closed" value="true" />
+      <created>1756109810016</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756109810016</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -159,6 +174,8 @@
     <MESSAGE value="create sample file xcel" />
     <MESSAGE value="update pom" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="pushh" />
+    <MESSAGE value="improving null safety" />
+    <option name="LAST_COMMIT_MESSAGE" value="improving null safety" />
   </component>
 </project>
