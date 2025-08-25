@@ -50,7 +50,8 @@ public class DriveByDataXCel {
 
                 for (int j = 0; j < colCount; j++) {
                     String key = headers[j];
-                    String value = dataRow.getCell(j).toString().trim();
+                    Cell cell = dataRow.getCell(j);
+                    String value = (cell != null) ? cell.toString().trim() : "";
                     rowMap.put(key, value);
                 }
 
