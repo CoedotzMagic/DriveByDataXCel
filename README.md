@@ -28,10 +28,29 @@ String sheetName = "Sheet1"; // name of the sheet to access
 
 List<Map<String, String>> testData = DriveByDataXCel.readTestDataFromExcel(filePath, sheetName);
 
+int rowNum = 1;
 for (Map<String, String> row : testData) {
-    System.out.println("Username: " + row.get("username"));
-    System.out.println("Password: " + row.get("password"));
+    if (isRowValid(row, rowNum)) {
+      System.out.println("Username: " + row.get("username"));
+      System.out.println("Password: " + row.get("password"));
+    } else {
+      System.out.println("[Warning] Skipping row " + rowNum + " due to missing or empty fields.");
+    }
+    rowNum++;
 }
+
+private boolean isRowValid(Map<String, String> row, int rowNum) {
+    String[] requiredFields = {"username", "password"};
+
+        for (String field : requiredFields) {
+            String value = row.get(field);
+            if (value == null || value.trim().isEmpty()) {
+                System.err.println("[Error] Missing or empty value for '" + field + "' in row " + rowNum);
+                return false;
+            }
+        }
+        return true;
+    }
 ```
 
 ## TestNG / Unit Test
