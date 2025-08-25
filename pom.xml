@@ -6,7 +6,7 @@
 
     <groupId>com.coedotzmagic.drivebydataxcel</groupId>
     <artifactId>CoedotzMagic-DriveByDataXCel</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>CoedotzMagic - DriveByDataXCel</name>
